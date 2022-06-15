@@ -29,7 +29,7 @@ require_once('layouts/header.php');
      <?php endif ?>
 
      <!--ANOTACIONES-->
-<hr>
+
     <?php
      if(!empty($dato2)):
       foreach($dato2 as $key2 => $value2)
@@ -58,7 +58,7 @@ require_once('layouts/header.php');
         <div class="contenido">
                     <div class="text-archivos">
                         <i class="fa-solid fa-box-archive"></i>
-                        <p>No se han archivado tareas aun</p>
+                        <p>No se han archivado tareas o anotaciones aun</p>
                     </div>
                 </div>
       <?php endif ?> 
