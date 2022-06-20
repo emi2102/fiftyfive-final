@@ -40,8 +40,8 @@ require_once('layouts/header.php');
                          <p>
                          <div class="contenedor-iconos2">
                              <a href="index.php?n=editar_nota2&id=<?php echo $v2['id']?>"><i class="fa-solid fa-pen-to-square iconos2"></i></a>
-                            <a href="index.php?n=sacarArch&id=<?php echo $v2['id']?>"><i class="fa-solid fa-box-archive iconos2"></i></a>
-                             <a href="index.php?n=papeleraArch&id=<?php echo $v2['id']?>"><i class="fa-solid fa-trash-can iconos2"></i></a> 
+                            <a href="index.php?n=sacarArch2&id=<?php echo $v2['id']?>"><i class="fa-solid fa-box-archive iconos2"></i></a>
+                             <a href="index.php?n=papeleraArch2&id=<?php echo $v2['id']?>"><i class="fa-solid fa-trash-can iconos2"></i></a> 
                              <a href="index.php?n=eliminarArchivado_nota&id=<?php echo $v2['id']?>" onclick="return confirm('¿Estas seguro de eliminar?'); false"><i class="fa-solid fa-circle-xmark iconos2"></i></a> 
                                   
                              </div>

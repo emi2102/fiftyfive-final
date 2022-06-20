@@ -191,11 +191,18 @@
             $datix=$datos->traerIdUser("sesiones",$data);
             $dato=$datos->archivar("tarea","id=".$id,0);
              $dato=$datos->mostrar("tarea","1",$datix);
-
-             $data=$datos2->traerIdSesiones("sesiones");//anotaciones
-             $datix=$datos2->traerIdUser("sesiones",$data);//anotaciones
-             $dato2=$datos2->archivar("anotaciones","id=".$id,0);//anotaciones
               $dato2=$datos2->mostrar_nota("anotaciones","1",$datix);//anotaciones
+            require_once("vista/archivados.php");
+          } 
+            static function sacarArch2(){
+            $id=$_REQUEST['id'];
+            $datos=new Modelo();
+            $datos2=new Modelo();//anotaciones
+             $data=$datos->traerIdSesiones("sesiones");
+            $datix=$datos->traerIdUser("sesiones",$data);
+             $dato2=$datos2->archivar("anotaciones","id=".$id,0);//anotaciones
+             $dato2=$datos2->mostrar_nota("anotaciones","1",$datix);//anotaciones
+             $dato=$datos->mostrar("tarea","1",$datix);
             require_once("vista/archivados.php");
           }
           static function paginaArch(){
@@ -214,9 +221,14 @@
           static function papeleraArch(){
             $id=$_REQUEST['id'];
             $datos=new Modelo();
-           
+            $datos2=new Modelo();//anotaciones
             $dato=$datos->archivar("tarea","id=".$id,2);
-            
+            header('location:'.'index.php?n=paginaArch');
+          } 
+           static function papeleraArch2(){
+            $id=$_REQUEST['id'];
+            $datos2=new Modelo();//anotaciones
+            $dato2=$datos2->archivar("anotaciones","id=".$id,2);//anotaciones
             header('location:'.'index.php?n=paginaArch');
           }
 
@@ -226,6 +238,12 @@
             $datos=new Modelo();
             $datos2=new Modelo();
             $dato=$datos->archivar("tarea","id=".$id,2);
+            header('location:'.'index.php?n=index');
+          } 
+           static function papelera2(){
+            $id=$_REQUEST['id'];
+            $datos=new Modelo();
+            $datos2=new Modelo();
             $dato2=$datos2->archivar("anotaciones","id=".$id,2);
             header('location:'.'index.php?n=index');
           } 
@@ -237,10 +255,17 @@
             $datix=$datos->traerIdUser("sesiones",$data);
             $dato=$datos->archivar("tarea","id=".$id,0);
              $dato=$datos->mostrar("tarea","2",$datix);
-
+              $dato2=$datos2->mostrar_nota("anotaciones","2",$datix); //anotaciones
+            require_once("vista/papelera.php");
+          }   
+          static function sacarPapelera2(){
+            $id=$_REQUEST['id'];
+            $datos2=new Modelo();//anotaciones
+             $datos=new Modelo();
              $data=$datos2->traerIdSesiones("sesiones"); //anotaciones
              $datix=$datos2->traerIdUser("sesiones",$data); //anotaciones
              $dato2=$datos2->archivar("anotaciones","id=".$id,0); //anotaciones
+             $dato=$datos->mostrar("tarea","2",$datix);
               $dato2=$datos2->mostrar_nota("anotaciones","2",$datix); //anotaciones
             require_once("vista/papelera.php");
           }

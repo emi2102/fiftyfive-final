@@ -41,7 +41,7 @@ require_once('layouts/header.php');
                             <div class="contenedor-iconos2">
                                   <a href="index.php?n=editar_nota&id=<?php echo $v2['id']?>"><i class="fa-solid fa-pen-to-square iconos2"></i></a>
                             <a href="index.php?n=archivar_nota&id=<?php echo $v2['id']?>"><i class="fa-solid fa-box-archive iconos2"></i></a>
-                            <a href="index.php?n=sacarPapelera&id=<?php echo $v2['id']?>"><i class="fa-solid fa-trash-can iconos2"></i></a> 
+                            <a href="index.php?n=sacarPapelera2&id=<?php echo $v2['id']?>"><i class="fa-solid fa-trash-can iconos2"></i></a> 
                             <a href="index.php?n=eliminar_nota&id=<?php echo $v2['id']?>" onclick="return confirm('¿Estas seguro de eliminar?'); false"><i class="fa-solid fa-circle-xmark iconos2"></i></a> 
                             </div>
                         </p>
